@@ -185,6 +185,18 @@ android_app_import {
 }
 
 android_app_import {
+	name: "MotoWavesV2",
+	owner: "motorola",
+	apk: "proprietary/product/app/MotoWavesV2/MotoWavesV2.apk",
+	overrides: ["MusicFX"],
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	product_specific: true,
+}
+
+android_app_import {
 	name: "QtiTelephonyService",
 	owner: "motorola",
 	apk: "proprietary/product/app/QtiTelephonyService/QtiTelephonyService.apk",
@@ -205,6 +217,24 @@ android_app_import {
 	},
 	privileged: true,
 	product_specific: true,
+}
+
+android_app_import {
+	name: "WavesServiceV2",
+	owner: "motorola",
+	apk: "proprietary/system_ext/priv-app/WavesServiceV2/WavesServiceV2.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "com.motorola.frameworks.core.addon",
+	owner: "motorola",
+	jars: ["proprietary/system/framework/com.motorola.frameworks.core.addon.jar"],
 }
 
 dex_import {
